@@ -105,14 +105,15 @@ CSS custom property | Description | Default
               src="[[_getSrc(msg.author)]]">
             </iron-icon>
             <div
-              class="text"
               title="[[_formatTimestamp(msg.created)]]">
               <div class="author" 
                 title="[[msg.author]]" 
-                hidden$="[[!showAuthorText]]">[[msg.author]]</div>
-              <template is="dom-repeat" items="[[_messageLines(msg.text)]]">
-                [[item]]<br/>
-              </template>
+                   hidden$="[[!showAuthorText]]">[[msg.author]]</div>
+              <div class="text">
+                <template is="dom-repeat" items="[[_messageLines(msg.text)]]">
+                  [[item]]<br/>
+                </template>
+              </div>
             </div>
           </div>
         </div>
