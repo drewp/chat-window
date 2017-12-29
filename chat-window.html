@@ -15,10 +15,14 @@ See `chat-messages` and `chat-input` for additional property mixins.
   <template>
     <style>
       :host {
-        display: block;
+        display: flex;
+        flex-direction: column;
       }
       .container {
         @apply --chat-window;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
       }
       chat-messages {
         @apply --chat-window-messages;
